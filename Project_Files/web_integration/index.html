@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Disease Prediction Model</title>
+</head>
+<body style="background-color:#DBF9FC">
+    <div class="container">
+        <h2 class='container-heading'><span class="heading_font">Disease Prediction Using ML</span></h2>
+    </div>
+    <br>
+
+
+        <div style = "position:fixed; left:360px; top:200px; right:720px; text-align: justify">
+            A good medical record serves the interest of the medical practitioner as well as his patients. 
+        It is very important for the treating doctor to properly document the management of the patient under his care. 
+        Medical record keeping has evolved into a science. 
+        he key to dispensability of most of the medical negligence claim rest with the quality of the medical records. 
+        Record maintenance is the only way for the doctor to prove that the treatment was carried out properly. 
+        Medical records are often the only source of the truth. They are likely to be far more reliable than memory.
+        <br>
+        <br>
+        So, please enter your symptoms to know the prognosis/result. 
+        </div>
+
+
+    <div class="ml-container">
+        <form action="{{ url_for('predict') }}" method="POST">
+            <br>
+            <h3>itching</h3>
+            <input id="first" name="itching" placeholder="0/1" required="required">
+            <br>
+            <h3>continuous_sneezing</h3>
+            <input id="second" name="continuous_sneezing" placeholder="0/1" required="required">
+            <br>
+            <h3>shivering</h3>
+            <input id="third" name="shivering" placeholder="0/1" required="required">
+            <br>
+            <h3>joint_pain</h3>
+            <input id="fourth" name="joint_pain" placeholder="0/1" required="required">
+            <br>
+            <h3>stomach_pain</h3>
+            <input id="fifth" name="stomach_pain" placeholder="0/1" required="required">
+            <br>
+            <h3>vomiting</h3>
+            <input id="sixth" name="vomiting" placeholder="0/1" required="required">
+            <br>
+            <h3>fatigue</h3>
+            <input id="seventh" name="fatigue" placeholder="0/1" required="required">
+            <br>
+            <h3>weight_loss</h3>
+            <input id="eight" name="weight_loss" placeholder="0/1" required="required">
+            <br>
+            <h3>restlessness</h3>
+            <input id="ninth" name="restlessness" placeholder="0/1" required="required">
+            <br>
+            <h3>Lethargy</h3>
+            <input id="tenth" name="Lethargy" placeholder="0/1" required="required">
+            <br>
+            <h3>lack_of_concentration</h3>
+            <input id="eleven" name="lack_of_concentration" placeholder="0/1" required="required">
+            <br>
+            <br>
+            <br>
+            <button id="sub" type="submit ">Submit</button>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p class='footer-description'>©2023 Phanindra</p>
+
+        </form>
+    </div>
+
+    
+
+
+
+
+
+<style>
+
+
+
+    body {
+        background-image: linear-gradient(to bottom right, #33475b, #0033CC, #FF77CC, rgb(255, 122, 89));
+        
+        /*Additional Styling*/
+        
+        font-family: 'Lexend Deca', sans-serif;
+        width: 800px; 
+        margin: auto;
+        padding-top: 30px;
+        color: white;
+        text-align: left;
+        display: flex;
+      }
+
+
+
+
+/* Heading Font */
+.container-heading{
+    margin: 0;
+}
+
+.heading_font{
+    color: #black;
+	font-family: 'Pacifico', cursive;
+	font-size: 50px;
+	font-weight: normal;
+}
+
+
+
+/* Box */
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            width: 150px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            width: 220px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            width: 180px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            width: 250px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #fifth {
+            border-radius: 14px;
+            height: 25px;
+            width: 270px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #sixth {
+            border-radius: 14px;
+            height: 25px;
+            width: 280px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #seventh {
+            border-radius: 14px;
+            height: 25px;
+            width: 170px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #eight {
+            border-radius: 14px;
+            height: 25px;
+            width: 150px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #ninth {
+            border-radius: 14px;
+            height: 25px;
+            width: 280px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #tenth {
+            border-radius: 14px;
+            height: 25px;
+            width: 280px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #eleven {
+            border-radius: 14px;
+            height: 25px;
+            width: 280px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+
+
+/* Submit Button */
+#sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</style>
+
+
+</body>
+
+</html>
+
+
+
